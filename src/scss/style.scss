@@ -1,0 +1,43 @@
+$background-amarillo: rgb(247, 182, 23);
+$background-gris: rgb(43, 43, 43);
+$font-blanco: rgb(255, 255, 255);
+$font-titulo: 'Montserrat', sans-serif;
+$font-contenido: 'Josefin Sans', sans-serif;
+@mixin list ($padd){
+	list-style: none;
+	padding: $padd;
+	background-color: $background-gris;
+	color: $font-blanco;
+	margin: $padd;	
+}
+
+*{
+	font-family: $font-contenido;
+}
+.header{
+	background-color: $background-amarillo;
+	color: $font-blanco;
+	margin: 5%;
+	padding: 4%;
+	h1{
+		font-family: $font-titulo;
+	}
+}
+
+ul{
+	li{
+		@include list(3%);
+	}
+	.list-dif{
+		@extend .list-dif;
+		background-color: $background-amarillo;
+		font-family: $font-contenido;
+	}
+}
+
+content{
+	h2, h3{
+		font-family: $font-titulo;
+	}
+}
+
