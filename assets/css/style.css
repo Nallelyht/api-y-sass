@@ -19,7 +19,20 @@ ul .list-dif {
   background-color: #f7b617;
   font-family: "Josefin Sans", sans-serif; }
 
-content h2, content h3 {
+.content h2, .content h3 {
   font-family: "Montserrat", sans-serif; }
+
+.aside {
+  background: #2b2b2b;
+  color: white;
+  text-align: center; }
+  .aside h2 {
+    font-family: "Montserrat", sans-serif; }
+
+.footer {
+  background: #2b2b2b;
+  color: white;
+  padding: 1%;
+  text-align: center; }
 
 /*# sourceMappingURL=style.css.map */
