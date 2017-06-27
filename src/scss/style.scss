@@ -3,6 +3,7 @@ $background-gris: rgb(43, 43, 43);
 $font-blanco: rgb(255, 255, 255);
 $font-titulo: 'Montserrat', sans-serif;
 $font-contenido: 'Josefin Sans', sans-serif;
+
 @mixin list ($padd){
   list-style: none;
   padding: $padd;
@@ -39,6 +40,9 @@ ul{
   h2, h3{
     font-family: $font-titulo;
   }
+	p{
+		margin: 2% 2% 2% 0;
+	}
 }
 
 .aside{
