@@ -1,0 +1,25 @@
+* {
+  font-family: "Josefin Sans", sans-serif; }
+
+.header {
+  background-color: #f7b617;
+  color: white;
+  margin: 5%;
+  padding: 4%; }
+  .header h1 {
+    font-family: "Montserrat", sans-serif; }
+
+ul li {
+  list-style: none;
+  padding: 3%;
+  background-color: #2b2b2b;
+  color: white;
+  margin: 3%; }
+ul .list-dif {
+  background-color: #f7b617;
+  font-family: "Josefin Sans", sans-serif; }
+
+content h2, content h3 {
+  font-family: "Montserrat", sans-serif; }
+
+/*# sourceMappingURL=style.css.map */
