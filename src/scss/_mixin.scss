@@ -1,0 +1,12 @@
+@mixin grid ($columns) {
+  width: $column * ($columns);
+  float: left;
+}
+
+@mixin list ($padd){
+  list-style: none;
+  padding: $padd;
+  background-color: $background-gris;
+  color: $font-blanco;
+  margin: $padd;	
+}
