@@ -21,6 +21,8 @@ ul .list-dif {
 
 .content h2, .content h3 {
   font-family: "Montserrat", sans-serif; }
+.content p {
+  margin: 2% 2% 2% 0; }
 
 .aside {
   background: #2b2b2b;
