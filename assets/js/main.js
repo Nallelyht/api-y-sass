@@ -23,7 +23,7 @@ var mostrarElementos = function (elemento) {
 	var nombre = elemento.name;
 
 	plantillaFinal += plantillaLista
-		.replace("__nombre__", nombre);
+		.replace('__nombre__', nombre);
 
 
 	$("#lista").append(plantillaFinal);
