@@ -1,32 +1,13 @@
-$background-amarillo: rgb(247, 182, 23);
-$background-gris: rgb(43, 43, 43);
-$font-blanco: rgb(255, 255, 255);
-$font-titulo: 'Montserrat', sans-serif;
-$font-contenido: 'Josefin Sans', sans-serif;
-$center-align: center;
-$column:8.333%;
-$break-small: 320px;
-$break-medium:767px;
-$break-large:1200px;
+@import 'variables';
+@import 'mixin'; 
 
-@mixin grid ($columns) {
-  width: $column * ($columns);
-  float: left;
-}
 
-@mixin list ($padd){
-	list-style: none;
-	padding: $padd;
-	background-color: $background-gris;
-	color: $font-blanco;
-	margin: $padd;	
-}
 
 *{
   box-sizing: border-box;
   margin:0;
   padding:0;
-	font-family: $font-contenido;
+  font-family: $font-contenido;
 }
 
 .container {
@@ -34,72 +15,97 @@ $break-large:1200px;
   // max-width: 1200px;
   margin: 0 auto;
 }
+
 .row::before, .row::after {
   content: " ";
   display: table;
 }
+
 .row::after {
   clear: both;
 }
 
-
-.header{
-	background-color: $background-amarillo;
-	color: $font-blanco;
-	margin: 5%;
-	padding: 4%;
-	h1{
-		font-family: $font-titulo;
-	}
-}
-.col-items{
-  @media (min-width: $break-small) {
-    @include grid (12);
-    }
-  @media (min-width: $break-medium) {
-    @include grid (3);
-    }
-  @media (min-width: $break-large) {
-    @include grid (4);
-    }
+header{
+  background-color: $background-amarillo;
+  color: $font-blanco;
+  margin: 5%;
+  padding: 4%;
+  h1{
+    font-family: $font-titulo;
+  }
 }
 
-ul{
-	li{
-		@include list(3%);
-	}
-	.list-dif{
-		@extend .list-dif;
-		background-color: $background-amarillo;
-		font-family: $font-contenido;
-	}
+.menu{
+  ul{
+    li{
+      @include list(3%);
+    }
+    .list-dif{
+      @extend .list-dif;
+      background-color: $background-amarillo;
+      font-family: $font-contenido;
+    }
+
+    @media (min-width: $break-small) {
+      @include grid (12);
+    }
+    @media (min-width: $break-medium) {
+      @include grid (4);
+    }
+    @media (min-width: $break-large) {
+      @include grid (4);
+    }
+  }
 }
 
 .content{
-	h2, h3{
-		font-family: $font-titulo;
-	}
-	p{
-		margin: 2% 2% 2% 0;
-	}
+
+  h2, h3{
+    font-family: $font-titulo;
+  }
+  p{
+    margin: 2% 2% 2% 0;
+  }
+  li{
+    list-style-position: inside;
+  }
+  @media (min-width: $break-small) {
+    @include grid (10);
+  }
+  @media (min-width: $break-medium) {
+    @include grid (8);
+  }
+  @media (min-width: $break-large) {
+    @include grid (4);
+  }
 }
 
 .aside{
-	background: $background-gris;
-	color: $font-blanco;
-	text-align: $center-align;
-	h2{
-		font-family: $font-titulo;
-		padding: 5%;
-	}
-	p{
-		padding-bottom: 3%;
-	}
+  background: $background-gris;
+  color: $font-blanco;
+  text-align: $center-align;
+  h2{
+    font-family: $font-titulo;
+    padding: 2%;
+  }
+  p{
+    padding-bottom: 3%;
+  }
+  @media (min-width: $break-small) {
+    @include grid (12);
+  }
+  @media (min-width: $break-medium) {
+    @include grid (12);
+  }
+  @media (min-width: $break-large) {
+    @include grid (4);
+  }
 }
 
 .footer{
-	background: $background-gris;
-	color: $font-blanco;
-	padding: 1%;    
-	text-align: $center-align;
+  background: $background-gris;
+  color: $font-blanco;
+  margin-top: 1%;
+  padding: 1%;    
+  text-align: $center-align;
 }
